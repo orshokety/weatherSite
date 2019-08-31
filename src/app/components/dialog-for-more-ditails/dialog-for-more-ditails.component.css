@@ -1,0 +1,11 @@
+body{
+    text-align: center;
+
+}
+.ditails{
+    float: left;
+    padding: 10px; 
+    border-width: 1px; 
+    margin-right: 10px;
+    background: rgba(225, 225, 225, 0.3);
+}

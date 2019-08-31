@@ -1,0 +1,14 @@
+<header>
+  <mat-toolbar style="background-color: #506b8f; width: 100%; height: 64px;; position: fixed;">
+    <p style="font-family: Comic Sans MS, cursive, sans-serif; color:white;"> Herolo Weather task </p>
+    <span style="flex: 1 1 auto;"></span>
+    <a mat-button style="color:white; padding-right: 15px;" [routerLink]="['/home']" title="Go to home page">
+      <mat-icon>home</mat-icon>
+    </a>
+    <a mat-button style="color:white" [routerLink]="['/favorites']" title="Go to favorites page">
+      <mat-icon>favorite</mat-icon>
+    </a>
+  </mat-toolbar>
+</header>
+
+<router-outlet></router-outlet>

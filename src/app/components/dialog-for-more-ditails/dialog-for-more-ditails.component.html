@@ -1,0 +1,16 @@
+<body>
+    <button mat-button style="float:right;" (click)="close()">
+        <mat-icon>clear</mat-icon>
+    </button>
+    <h2><b>{{data.city}}</b></h2>
+    <h4>{{data.country}}</h4>
+    <div style="justify-content: center ;display: flex; flex-wrap: wrap;">
+        <mat-card *ngFor="let day of fiveDaysArray" class="ditails">
+            <mat-card-content>
+                <p>Date: {{day.date| date}}</p><br>
+                <p>Weather: {{day.weatherText}}</p><br>
+                <p>Temperature: {{day.minTemp}}-{{day.maxTemp}}</p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</body>

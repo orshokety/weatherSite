@@ -1,0 +1,27 @@
+<body class="inventory-body">
+  <h1 *ngIf="littleCardArray.length > 0" style="font-family: Comic Sans MS, cursive, sans-serif;">Your favorite Places
+  </h1>
+  <mat-card class="little-cards" *ngFor="let card of littleCardArray" style=" background: rgba(225, 225, 225, 0.3);">
+    <mat-card-header>
+      <span style="flex: 1 1 auto;"></span>
+      <mat-card-actions>
+        <button mat-button (click)="removeFromFavorite(card)" title="Favorite" *ngIf="isFavorite(card)">
+          <mat-icon style="color:red">favorite</mat-icon>
+        </button>
+      </mat-card-actions>
+      <mat-card-title>{{card.city}}</mat-card-title>
+      <mat-card-subtitle>{{card.country}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>temperature: {{card.temperature}}</p>
+      <p>weather: {{card.weather}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button (click)="openFiveDays(card.city, card.country, card.locationKey)"
+        style=" background: rgba(76, 175, 80, 0.1);">Weather for 5
+        days</button>
+    </mat-card-actions>
+  </mat-card>
+  <h1 *ngIf="littleCardArray.length == 0" style="font-family: Comic Sans MS, cursive, sans-serif;">You dont have
+    favorite places</h1>
+</body>
